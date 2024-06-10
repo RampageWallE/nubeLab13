@@ -1,0 +1,21 @@
+.modifyUserContainer{
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    /* background-color: red; */   
+}
+
+.createUserButon{
+    background-color: green;
+    margin-top: 30px;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h2{
+    font-weight: 400;
+}

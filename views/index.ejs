@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 13 - Inicio</title>
+</head>
+<body>
+    <a href="/crearNuevoUsuario">Crear un nuevo usuario</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Foto</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+
+            </tr>
+        </thead>
+        <tbody">
+            <% results.forEach(function(usuario) { %>
+            <tr style="text-align: center; ">
+                <td><%= usuario.id %></td>
+                <td><%= usuario.nombre %></td>
+                <td><%= usuario.apellido %></td>
+                <td><%= usuario.correo %></td>
+                <td><%= usuario.fecha_nac %></td>
+                <td><%= usuario.foto%></td>
+                <td>
+                        <form action="/borrarUsuario/<%= usuario.id %>" method="POST">
+                        <button style="background-color: red;">ELIMINAR</button>
+                        </form>
+                    </td>
+                <td>
+                    <form action="/actualizarUsuario/<%= usuario.id %>" method="GET">
+                        <button style="background-color: green;">ACTUALIZAR</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

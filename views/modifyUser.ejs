@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 13 - Actualizar usuario </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form action="/actualizarUsuario/<%= id %>" method="post" >
+    <div 
+        class="modifyUserContainer"
+    > 
+        <h1>Creando un nuevo usuario</h1>
+        
+        <h2>ID</h2>
+        <input type="text" name="id" value="<%= id %>" disabled>
+        <h2>Nombre</h2>
+        <input type="text" name="nombre" value="<%= nombre %>">
+        <h2>Apellido</h2>
+        <input type="text" name="apellido" value="<%= apellido %>">
+        <h2>Correo</h2>
+        <input type="text" name="correo" value="<%= correo %>">
+        <h2>Fecha de Nacimiento</h2>
+        <input type="date" name="fecha_nac" value="<%= fecha_nac %>">
+        <h2>Foto</h2>
+        <input type="text" name="foto" value="foto">
+        <input class="createUserButon" type="submit" value="Crear">
+    </div>
+</form>
+</body>
+</html>
